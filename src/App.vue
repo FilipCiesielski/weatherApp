@@ -28,7 +28,6 @@ body {
   display: flex;
   justify-content: center;
   font-family: "Comfortaa", cursive;
-  height: 100vh;
   width: 100%;
 }
 </style>

@@ -10,9 +10,6 @@
       <button @click="checkWheather">search</button>
       <p :class="{ active: errorInfo }">Try again, enter correct city name</p>
     </div>
-    <div class="searchView" v-if="!showResult">
-      MY WEATHER APP
-    </div>
 
     <div v-if="showResult" class="wheather__box-showResult">
       <div class="wheather__box-showResult__mainInfo">
@@ -148,13 +145,12 @@ export default {
 <style scoped lang="scss">
 .wheather__box {
   width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-
-  height: auto;
+  padding: 0 1rem 0 1rem;
   background: rgba(98, 140, 245, 1);
   background: -moz-linear-gradient(
     top,
@@ -230,7 +226,7 @@ export default {
   .wheather__box-search {
     margin-bottom: 2rem;
     padding-top: 2rem;
-    height: auto;
+
     input {
       border: none;
       height: 2rem;
@@ -391,6 +387,11 @@ export default {
         }
       }
     }
+  }
+}
+@media (max-width: 1000px) and (orientation: landscape) {
+  .wheather__box {
+    height: 100%;
   }
 }
 </style>
