@@ -20,6 +20,9 @@ body {
   margin: 0;
   padding: 0;
 }
+* {
+  box-sizing: border-box;
+}
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -27,6 +30,7 @@ body {
   color: #2c3e50;
   display: flex;
   justify-content: center;
+  align-items: center;
   font-family: "Comfortaa", cursive;
   width: 100%;
 }
