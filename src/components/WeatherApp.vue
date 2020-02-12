@@ -248,13 +248,14 @@ export default {
 .weather__box {
   width: 100%;
   height: 100vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 
   .weather__sky {
     width: 100%;
-    height: 40%;
+    min-height: 45vh;
 
     background-color: #73bbc7;
     position: relative;
@@ -492,6 +493,10 @@ export default {
 @media (min-width: 1000px) {
   .weather__box .weather__box-showResult {
     width: 60%;
+   align-items: center;
+    .weather_box-showResult__localisationInfo{
+      width: 70%;
+    }
   }
 }
 @media (max-width: 1000px) and (orientation: landscape) {
