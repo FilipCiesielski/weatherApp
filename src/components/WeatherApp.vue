@@ -266,15 +266,14 @@ export default {
     input[type="text"] {
       position: absolute;
       width: 80%;
-      top: 40%;
+      top: 45%;
       left: 50%;
       transform: translateX(-50%);
       z-index: 5;
       padding: 11px 15px;
       background-color: rgba(255, 255, 255, 0.3);
       border: none;
-      border-bottom: 2px solid #d0edf1;
-      text-align: center;
+        text-align: center;
       outline: none;
       color: #4e8892;
       border-radius: 4px;
@@ -382,10 +381,11 @@ export default {
     justify-content: space-around;
     width: 100%;
     position: absolute;
-    top: 75%;
+    top: 85%;
     z-index: 6;
 
     input[type="radio"] {
+      outline: none;
       -webkit-appearance: none;
       -moz-appearance: none;
       appearance: none;
@@ -408,6 +408,7 @@ export default {
       border-width: 1px;
     }
     input[type="radio"]:checked {
+      outline: none;
       background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
       border-color: transparent;
       background-color: currentColor;
@@ -491,14 +492,26 @@ export default {
 }
 
 @media (min-width: 1000px) {
-  .weather__box .weather__box-showResult {
+
+  .weather__box {
+    .weather__sky{
+      display: flex;
+      justify-content: center;
+    align-items: center;
+      input[type="text"]{
+        width: 42%;
+      }
+    .tempOption{
+      width: 78%;
+    }}
+    .weather__box-showResult {
     width: 60%;
    align-items: center;
     .weather_box-showResult__localisationInfo{
       width: 70%;
     }
   }
-}
+}}
 @media (max-width: 1000px) and (orientation: landscape) {
   .weather__box {
     height: 100%;
